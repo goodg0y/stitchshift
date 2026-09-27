@@ -13,6 +13,7 @@ Modern Editorial / High-Fashion Minimalist — terinspirasi dari lookbook majala
 
 ## 📄 Struktur Halaman
 | Halaman | Deskripsi |
+|---|---|
 | `index.html` | Daftar rekomendasi outfit (tabel) |
 | `preferensi.html` | Form input preferensi gaya pengguna |
 | `detail.html` | Detail set outfit + purchase tracker |
