@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StitchShift - Atur Preferensi</title>
+</head>
+<body>
+
+  <header>
+    <h1>StitchShift</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="preferensi.html">Atur Preferensi</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>Atur Preferensi Gaya Kamu</h2>
+      <p>
+        Isi form berikut agar mesin rekomendasi StitchShift dapat mencocokkan
+        set outfit yang sesuai dengan tag preferensimu.
+      </p>
+
+      <form action="#" method="post">
+        <p>
+          <label for="vibe">Pilih Vibe</label><br>
+          <select id="vibe" name="vibe">
+            <option value="kasual">Kasual</option>
+            <option value="streetwear">Streetwear</option>
+            <option value="formal">Formal</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="kategori">Kategori Pakaian</label><br>
+          <select id="kategori" name="kategori">
+            <option value="atasan">Atasan</option>
+            <option value="bawahan">Bawahan</option>
+            <option value="dress">Dress</option>
+            <option value="outer">Outer</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="cutting">Tipe Cutting / Shape</label><br>
+          <select id="cutting" name="cutting">
+            <option value="oversized">Oversized</option>
+            <option value="slimfit">Slim Fit</option>
+            <option value="regular">Regular</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="tier">Preferensi Tier Belanja</label><br>
+          <select id="tier" name="tier">
+            <option value="higher">Higher Tier (Zara, Uniqlo, Levi's)</option>
+            <option value="casual">Casual Tier (Tokopedia, Shopee, TikTokShop)</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="referensi">Unggah Referensi Visual</label><br>
+          <input type="file" id="referensi" name="referensi" accept="image/*">
+        </p>
+
+        <p>
+          <label for="catatan">Catatan Tambahan</label><br>
+          <textarea id="catatan" name="catatan" rows="4" cols="40"
+            placeholder="Contoh: suka warna netral, ingin tampil formal tapi tetap santai"></textarea>
+        </p>
+
+        <p>
+          <button type="submit">Dapatkan Rekomendasi</button>
+        </p>
+      </form>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 StitchShift. Proyek Tugas Mata Kuliah Web.</p>
+  </footer>
+
+</body>
+</html>
