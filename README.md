@@ -26,16 +26,18 @@ Modern Editorial / High-Fashion Minimalist — terinspirasi dari lookbook majala
 ## 📸 Screenshot
 
 ### Beranda
-<img width="1587" height="876" alt="Screenshot 2026-09-27 220646" src="https://github.com/user-attachments/assets/70c00e3c-ff08-42e8-943b-d66b2ab51d53" />
+<img width="1898" height="864" alt="image" src="https://github.com/user-attachments/assets/6a5e94ba-193e-43f5-9355-f14b73721d24" />
+<img width="1901" height="848" alt="image" src="https://github.com/user-attachments/assets/4e45675e-9159-4847-a213-a999b1ef6b5a" />
 
 
 ### Atur Preferensi
-<img width="1590" height="876" alt="Screenshot 2026-09-27 220720" src="https://github.com/user-attachments/assets/6dad6534-87bd-4e73-aec9-0e7fec1f84da" />
+<img width="1898" height="859" alt="image" src="https://github.com/user-attachments/assets/cb3e690d-5752-4c46-9f17-04b79d15db58" />
+<img width="1895" height="852" alt="image" src="https://github.com/user-attachments/assets/313ff5d9-48b2-49a5-8ffa-dd84840ccbf1" />
 
 
 ### Detail Outfit
-<img width="1594" height="889" alt="Screenshot 2026-09-27 220750" src="https://github.com/user-attachments/assets/646c19e6-8320-4115-b968-c798fad976f3" />
-<img width="833" height="615" alt="Screenshot 2026-09-27 220818" src="https://github.com/user-attachments/assets/52461482-fa17-45c1-8576-a8246276865f" />
+<img width="1900" height="861" alt="image" src="https://github.com/user-attachments/assets/66b47159-58c0-426d-afde-9a705bd4bc44" />
+<img width="1900" height="800" alt="image" src="https://github.com/user-attachments/assets/bdf1a431-1f5a-40a4-a8b7-70843e6329c5" />
 
 
 ## 👤 Author
