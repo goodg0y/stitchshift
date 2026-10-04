@@ -4,20 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StitchShift - Detail Outfit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <header>
-    <h1>StitchShift</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="preferensi.html">Atur Preferensi</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1>StitchShift</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="preferensi.html">Atur Preferensi</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
+  <div class="container">
     <article>
       <h2>Urban Monochrome</h2>
       <p>Vibe: Streetwear | Kategori: Atasan &amp; Bawahan | Tier Referensi: Casual</p>
@@ -38,27 +45,27 @@
         <tbody>
           <tr>
             <td>Hoodie Oversized Hitam</td>
-            <td>Casual</td>
+            <td><span class="tier">Casual</span></td>
             <td><a href="https://www.tokopedia.com" target="_blank">Tokopedia</a></td>
-            <td>Dimiliki</td>
+            <td><span class="status status-owned">Dimiliki</span></td>
           </tr>
           <tr>
             <td>Celana Cargo Abu-abu</td>
-            <td>Casual</td>
+            <td><span class="tier">Casual</span></td>
             <td><a href="https://shopee.co.id" target="_blank">Shopee</a></td>
-            <td>Dimiliki</td>
+            <td><span class="status status-owned">Dimiliki</span></td>
           </tr>
           <tr>
             <td>Sneakers Putih</td>
-            <td>Casual</td>
+            <td><span class="tier">Casual</span></td>
             <td><a href="https://www.tiktok.com/shop" target="_blank">TikTokShop</a></td>
-            <td>Perlu Dibeli</td>
+            <td><span class="status status-needed">Perlu Dibeli</span></td>
           </tr>
           <tr>
             <td>Tas Selempang Hitam</td>
-            <td>Casual</td>
+            <td><span class="tier">Casual</span></td>
             <td><a href="https://shopee.co.id" target="_blank">Shopee</a></td>
-            <td>Perlu Dibeli</td>
+            <td><span class="status status-needed">Perlu Dibeli</span></td>
           </tr>
         </tbody>
       </table>
@@ -72,19 +79,19 @@
       </p>
 
       <form action="#" method="post">
-        <p>
+        <p class="checklist-item">
           <input type="checkbox" id="item1" name="item1" checked>
           <label for="item1">Hoodie Oversized Hitam - Sudah Dimiliki</label>
         </p>
-        <p>
+        <p class="checklist-item">
           <input type="checkbox" id="item2" name="item2" checked>
           <label for="item2">Celana Cargo Abu-abu - Sudah Dimiliki</label>
         </p>
-        <p>
+        <p class="checklist-item">
           <input type="checkbox" id="item3" name="item3">
           <label for="item3">Sneakers Putih - Perlu Dibeli</label>
         </p>
-        <p>
+        <p class="checklist-item">
           <input type="checkbox" id="item4" name="item4">
           <label for="item4">Tas Selempang Hitam - Perlu Dibeli</label>
         </p>
@@ -95,10 +102,13 @@
 
       <p>Progress: 2 dari 4 item sudah dimiliki. Sisa 2 item perlu dibeli.</p>
     </article>
+  </div>
   </main>
 
   <footer>
-    <p>&copy; 2026 StitchShift. Proyek Tugas Mata Kuliah Web.</p>
+    <div class="container">
+      <p>&copy; 2026 StitchShift. Proyek Tugas Mata Kuliah Web.</p>
+    </div>
   </footer>
 
 </body>

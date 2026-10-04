@@ -1,0 +1,358 @@
+/* =======================================
+   StitchShift - style.css
+   Tugas Minggu 3: CSS Native (tanpa framework)
+   ======================================= */
+
+/* Reset dasar supaya margin/padding bawaan browser tidak mengganggu */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:unset;
+}
+
+/* ===== Variabel Warna =====
+   Dikumpulkan di satu tempat supaya mudah diubah.
+   --color-accent adalah SATU warna aksen (burgundy) yang
+   dipakai konsisten di tombol, link, dan highlight lainnya. */
+:root {
+  --color-dark: #111111;
+  --color-light: #ffffff;
+  --color-gray: #f7f7f7;
+  --color-border: #dddddd;
+  --color-accent: #8b1e3f;
+  --color-accent-dark: #6e1830;
+}
+
+/* ===== Font & Warna Dasar ===== */
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #222222;
+  background-color: #fafafa;
+  line-height: 1.6;
+}
+
+/* Judul pakai font serif editorial supaya terasa seperti majalah fashion */
+h1, h2, h3 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+h1 {
+  font-size: 34px;
+}
+
+h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 12px;
+}
+
+/* ===== Container (pakai div untuk membatasi lebar konten) ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  text-align: center;
+}
+
+header h1 {
+  color: var(--color-light);
+}
+
+header p {
+  color: #cccccc;
+  margin-bottom: 15px;
+}
+
+/* ===== Navigasi (styling list ul/li, pakai Flexbox) ===== */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 12px;
+}
+
+nav ul li a {
+  color: var(--color-light);
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav ul li a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* ===== Hero Banner (halaman utama) =====
+   Gambar besar + overlay teks untuk kesan "lookbook" yang eye-catching. */
+.hero {
+  position: relative;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.hero img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-overlay h2 {
+  color: var(--color-light);
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.hero-overlay p {
+  color: #f0f0f0;
+  margin-bottom: 18px;
+}
+
+/* Tombol beraksen (dipakai di hero & dapat dipakai ulang di tempat lain) */
+.btn-accent {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-light);
+  text-decoration: none;
+  padding: 10px 26px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.btn-accent:hover {
+  background-color: var(--color-accent-dark);
+}
+
+/* ===== Artikel / Section Konten ===== */
+main article {
+  background-color: var(--color-gray);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+main article h2,
+main article h3 {
+  text-align: left;
+  display: inline-block;
+  border-bottom: 3px solid var(--color-accent);
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+}
+
+/* ===== Tabel ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid var(--color-border);
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+table a {
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+table a:hover {
+  text-decoration: underline;
+}
+
+/* Zebra-stripe: baris genap diberi warna sedikit berbeda (pseudo-class nth-child) */
+tbody tr:nth-child(even) {
+  background-color: #eeeeee;
+}
+
+/* Highlight baris saat kursor diarahkan ke sana (pseudo-class hover) */
+tbody tr:hover {
+  background-color: #e4e4e4;
+}
+
+/* ===== Badge Status & Tier (pakai span untuk teks yang perlu ditonjolkan) ===== */
+.status {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 3px;
+}
+
+.status-owned {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border: 1px solid var(--color-dark);
+}
+
+.status-needed {
+  background-color: var(--color-light);
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+}
+
+.tier {
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* ===== Form ===== */
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+form select,
+form textarea,
+form input[type="file"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #999999;
+  border-radius: 4px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+form button {
+  background-color: var(--color-accent);
+  color: var(--color-light);
+  padding: 10px 26px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--color-accent-dark);
+}
+
+/* Outline saat field form sedang difokus/diklik (pseudo-class focus) */
+form select:focus,
+form textarea:focus,
+form input:focus {
+  outline: 2px solid var(--color-accent);
+}
+
+/* Attribute selector: menargetkan khusus input bertipe checkbox */
+input[type="checkbox"] {
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+/* Baris checklist di halaman detail */
+.checklist-item label {
+  display: inline;
+  font-weight: normal;
+}
+
+/* ===== Gambar ===== */
+main img {
+  display: block;
+  margin: 15px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  text-align: center;
+  padding: 15px 0;
+  font-size: 13px;
+  margin-top: 30px;
+}
+
+/* =========================================================
+   RESPONSIVE: contoh @media query
+   Navigasi berubah dari horizontal -> vertikal di layar sempit
+   ========================================================= */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 8px 0;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .hero img {
+    height: 260px;
+  }
+
+  .hero-overlay h2 {
+    font-size: 22px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  th, td {
+    font-size: 13px;
+    padding: 6px;
+  }
+}
