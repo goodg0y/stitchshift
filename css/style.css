@@ -312,6 +312,8 @@ main img {
   margin: 15px auto;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  max-width: 100%;
+  height: auto;
 }
 
 /* ===== Footer ===== */
@@ -358,4 +360,11 @@ footer {
     font-size: 13px;
     padding: 6px;
   }
+
+  .table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  /* Menambahkan kelancaran scrolling pada perangkat sentuh iOS/Android */
+  -webkit-overflow-scrolling: touch; 
+}
 }
