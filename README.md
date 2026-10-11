@@ -24,18 +24,15 @@ Modern Editorial / High-Fashion Minimalist — terinspirasi dari lookbook majala
 ## 📸 Screenshot
 
 ### Beranda
-<img width="1899" height="862" alt="image" src="https://github.com/user-attachments/assets/35901293-423e-47e7-bf17-e8776ca0821b" />
-<img width="1900" height="860" alt="image" src="https://github.com/user-attachments/assets/f707a048-0b1f-4790-8743-c4de6992d04b" />
+<img width="2508" height="2486" alt="_C__Users_Windows%2011_Documents_Tel-U_Kuliah_WEB_stitchshift-webapp_index html" src="https://github.com/user-attachments/assets/80375653-ff96-4225-b7e7-6dbaeb25fd11" />
 
 
 ### Atur Preferensi
-<img width="1891" height="856" alt="image" src="https://github.com/user-attachments/assets/d234c6fb-0b80-4596-814b-835166222463" />
-<img width="1898" height="857" alt="image" src="https://github.com/user-attachments/assets/3864c32a-4548-4669-bce3-f94b2911cded" />
+<img width="2508" height="2470" alt="_C__Users_Windows%2011_Documents_Tel-U_Kuliah_WEB_stitchshift-webapp_preferensi html" src="https://github.com/user-attachments/assets/f5d6dff6-a1f9-49af-a2c7-85db7765d10a" />
 
 
 ### Detail Outfit
-<img width="1898" height="863" alt="image" src="https://github.com/user-attachments/assets/e29ad896-6a06-4b36-b783-c07a0c5fb802" />
-<img width="1898" height="852" alt="image" src="https://github.com/user-attachments/assets/6ef2be9a-4235-48f6-9fd1-b355485768b3" />
+<img width="2508" height="2924" alt="_C__Users_Windows%2011_Documents_Tel-U_Kuliah_WEB_stitchshift-webapp_detail html" src="https://github.com/user-attachments/assets/92b36ba6-7c0b-47a7-963d-24e2df1e36ac" />
 
 
 ## 👤 Author
