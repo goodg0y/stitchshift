@@ -6,93 +6,138 @@
   <title>StitchShift - Atur Preferensi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#0e0d0e",
+            panel: "#1a181a",
+            cream: "#f2efe9",
+            muted: "#a79f98",
+            accent: { DEFAULT: "#d7263d", dark: "#a81f30" }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', "Georgia", "serif"],
+            sans: ["Inter", "Arial", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
 </head>
-<body>
-
-  <header>
-    <div class="container">
-      <h1>StitchShift</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Beranda</a></li>
-          <li><a href="preferensi.html">Atur Preferensi</a></li>
+<body class="bg-ink text-cream font-sans leading-relaxed antialiased">
+  <header class="border-b border-white/10">
+    <div class="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-7">
+      <a href="index.html" class="font-serif text-xl font-bold tracking-wide">StitchShift</a>
+      <nav aria-label="Navigasi utama">
+        <ul class="flex flex-wrap gap-x-6 gap-y-2">
+          <li><a href="index.html" class="text-muted hover:text-accent text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent">Beranda</a></li>
+          <li><a href="detail.html" class="text-muted hover:text-accent text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent">Detail Outfit</a></li>
+          <li><a href="preferensi.html" class="text-accent text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent">Atur Preferensi</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-  <div class="container">
-    <article>
-      <h2>Atur Preferensi Gaya Kamu</h2>
-      <p>
-        Isi form berikut agar mesin rekomendasi StitchShift dapat mencocokkan
-        set outfit yang sesuai dengan tag preferensimu.
-      </p>
+  <main class="mx-auto max-w-6xl px-4 pt-10 sm:px-7">
+    <!-- Halaman form -->
+    <h1 class="font-serif text-3xl font-bold sm:text-5xl">Atur preferensi gaya kamu</h1>
+    <p class="mt-4 max-w-xl text-muted">Pilih kombinasi yang paling mewakili gayamu. Rekomendasi akan dicocokkan dengan katalog outfit.</p>
 
-      <form action="#" method="post">
-        <p>
-          <label for="vibe">Pilih Vibe</label><br>
-          <select id="vibe" name="vibe">
-            <option value="kasual">Kasual</option>
-            <option value="streetwear">Streetwear</option>
-            <option value="formal">Formal</option>
-          </select>
-        </p>
+    <form action="#" method="post" class="mt-10 max-w-3xl">
+        <fieldset class="mb-8">
+          <legend class="mb-3 font-serif font-bold">Vibe</legend>
+          <div class="flex flex-wrap gap-2.5">
+            <div>
+              <input type="radio" id="vibe-kasual" name="vibe" value="kasual" class="peer sr-only" checked>
+              <label for="vibe-kasual" class="block cursor-pointer rounded-full bg-panel px-5 py-2.5 text-sm font-semibold text-muted transition-colors hover:text-cream peer-checked:bg-accent peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent">Kasual</label>
+            </div>
+            <div>
+              <input type="radio" id="vibe-streetwear" name="vibe" value="streetwear" class="peer sr-only">
+              <label for="vibe-streetwear" class="block cursor-pointer rounded-full bg-panel px-5 py-2.5 text-sm font-semibold text-muted transition-colors hover:text-cream peer-checked:bg-accent peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent">Streetwear</label>
+            </div>
+            <div>
+              <input type="radio" id="vibe-formal" name="vibe" value="formal" class="peer sr-only">
+              <label for="vibe-formal" class="block cursor-pointer rounded-full bg-panel px-5 py-2.5 text-sm font-semibold text-muted transition-colors hover:text-cream peer-checked:bg-accent peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent">Formal</label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="mb-8">
+          <legend class="mb-3 font-serif font-bold">Kategori pakaian</legend>
+          <div class="flex flex-wrap gap-2.5">
+            <div>
+              <input type="radio" id="kategori-atasan" name="kategori" value="atasan" class="peer sr-only" checked>
+              <label for="kategori-atasan" class="block cursor-pointer rounded-full bg-panel px-5 py-2.5 text-sm font-semibold text-muted transition-colors hover:text-cream peer-checked:bg-accent peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent">Atasan</label>
+            </div>
+            <div>
+              <input type="radio" id="kategori-bawahan" name="kategori" value="bawahan" class="peer sr-only">
+              <label for="kategori-bawahan" class="block cursor-pointer rounded-full bg-panel px-5 py-2.5 text-sm font-semibold text-muted transition-colors hover:text-cream peer-checked:bg-accent peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent">Bawahan</label>
+            </div>
+            <div>
+              <input type="radio" id="kategori-dress" name="kategori" value="dress" class="peer sr-only">
+              <label for="kategori-dress" class="block cursor-pointer rounded-full bg-panel px-5 py-2.5 text-sm font-semibold text-muted transition-colors hover:text-cream peer-checked:bg-accent peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent">Dress</label>
+            </div>
+            <div>
+              <input type="radio" id="kategori-outer" name="kategori" value="outer" class="peer sr-only">
+              <label for="kategori-outer" class="block cursor-pointer rounded-full bg-panel px-5 py-2.5 text-sm font-semibold text-muted transition-colors hover:text-cream peer-checked:bg-accent peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent">Outer</label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="mb-8">
+          <legend class="mb-3 font-serif font-bold">Tipe cutting</legend>
+          <div class="flex flex-wrap gap-2.5">
+            <div>
+              <input type="radio" id="cutting-oversized" name="cutting" value="oversized" class="peer sr-only" checked>
+              <label for="cutting-oversized" class="block cursor-pointer rounded-full bg-panel px-5 py-2.5 text-sm font-semibold text-muted transition-colors hover:text-cream peer-checked:bg-accent peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent">Oversized</label>
+            </div>
+            <div>
+              <input type="radio" id="cutting-slimfit" name="cutting" value="slimfit" class="peer sr-only">
+              <label for="cutting-slimfit" class="block cursor-pointer rounded-full bg-panel px-5 py-2.5 text-sm font-semibold text-muted transition-colors hover:text-cream peer-checked:bg-accent peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent">Slim fit</label>
+            </div>
+            <div>
+              <input type="radio" id="cutting-regular" name="cutting" value="regular" class="peer sr-only">
+              <label for="cutting-regular" class="block cursor-pointer rounded-full bg-panel px-5 py-2.5 text-sm font-semibold text-muted transition-colors hover:text-cream peer-checked:bg-accent peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent">Regular</label>
+            </div>
+          </div>
+        </fieldset>
 
-        <p>
-          <label for="kategori">Kategori Pakaian</label><br>
-          <select id="kategori" name="kategori">
-            <option value="atasan">Atasan</option>
-            <option value="bawahan">Bawahan</option>
-            <option value="dress">Dress</option>
-            <option value="outer">Outer</option>
-          </select>
-        </p>
+        <fieldset class="mb-8">
+          <legend class="mb-3 font-serif font-bold">Tier belanja</legend>
+          <div class="grid gap-3 sm:grid-cols-2">
+            <div>
+              <input type="radio" id="tier-higher" name="tier" value="higher" class="peer sr-only" checked>
+              <label for="tier-higher" class="block h-full cursor-pointer rounded-xl bg-panel p-5 transition-colors peer-checked:bg-accent peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent">
+                <span class="block font-serif text-lg font-bold">Higher tier</span>
+                <span class="mt-1 block text-sm opacity-80">Zara, Uniqlo, Levi's: kualitas premium, harga lebih tinggi.</span>
+              </label>
+            </div>
+            <div>
+              <input type="radio" id="tier-casual" name="tier" value="casual" class="peer sr-only">
+              <label for="tier-casual" class="block h-full cursor-pointer rounded-xl bg-panel p-5 transition-colors peer-checked:bg-accent peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent">
+                <span class="block font-serif text-lg font-bold">Casual tier</span>
+                <span class="mt-1 block text-sm opacity-80">Tokopedia, Shopee, TikTokShop: terjangkau dan mudah diakses.</span>
+              </label>
+            </div>
+          </div>
+        </fieldset>
 
-        <p>
-          <label for="cutting">Tipe Cutting / Shape</label><br>
-          <select id="cutting" name="cutting">
-            <option value="oversized">Oversized</option>
-            <option value="slimfit">Slim Fit</option>
-            <option value="regular">Regular</option>
-          </select>
-        </p>
-
-        <p>
-          <label for="tier">Preferensi Tier Belanja</label><br>
-          <select id="tier" name="tier">
-            <option value="higher">Higher Tier (Zara, Uniqlo, Levi's)</option>
-            <option value="casual">Casual Tier (Tokopedia, Shopee, TikTokShop)</option>
-          </select>
-        </p>
-
-        <p>
-          <label for="referensi">Unggah Referensi Visual</label><br>
-          <input type="file" id="referensi" name="referensi" accept="image/*">
-        </p>
-
-        <p>
-          <label for="catatan">Catatan Tambahan</label><br>
-          <textarea id="catatan" name="catatan" rows="4" cols="40"
-            placeholder="Contoh: suka warna netral, ingin tampil formal tapi tetap santai"></textarea>
-        </p>
-
-        <p>
-          <button type="submit">Dapatkan Rekomendasi</button>
-        </p>
-      </form>
-    </article>
-  </div>
+        <h2 class="mb-4 border-b border-white/10 pb-2 font-serif text-xl font-bold">Detail tambahan <span class="ml-2 text-xs font-semibold text-muted">Opsional</span></h2>
+        <div class="mb-6">
+          <label for="referensi" class="mb-2 block text-sm font-semibold text-muted">Referensi visual</label>
+          <input type="file" id="referensi" name="referensi" accept="image/*" class="w-full max-w-lg text-sm text-muted file:mr-4 file:rounded-full file:border-0 file:bg-panel file:px-4 file:py-2 file:font-semibold file:text-cream hover:file:bg-white/10">
+        </div>
+        <div class="mb-8">
+          <label for="catatan" class="mb-2 block text-sm font-semibold text-muted">Catatan tambahan</label>
+          <textarea id="catatan" name="catatan" rows="3" placeholder="Contoh: suka warna netral, ingin tampil formal tapi tetap santai" class="w-full max-w-lg border-0 border-b border-white/10 bg-transparent py-2 text-sm text-cream placeholder:text-muted/60 focus:border-accent focus:outline-none"></textarea>
+        </div>
+        <button type="submit" class="rounded-full bg-accent px-10 py-3.5 text-sm font-semibold transition-colors hover:bg-accent-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Lihat rekomendasi outfit</button>
+    </form>
   </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 StitchShift. Proyek Tugas Mata Kuliah Web.</p>
-    </div>
+  <footer class="mt-16 border-t border-white/10 py-5">
+    <p class="mx-auto max-w-6xl px-4 text-sm text-muted sm:px-7">&copy; 2026 StitchShift. Proyek Tugas Mata Kuliah Web.</p>
   </footer>
-
 </body>
 </html>

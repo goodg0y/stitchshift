@@ -6,108 +6,91 @@
   <title>StitchShift - Beranda</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#0e0d0e",
+            panel: "#1a181a",
+            cream: "#f2efe9",
+            muted: "#a79f98",
+            accent: { DEFAULT: "#d7263d", dark: "#a81f30" }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', "Georgia", "serif"],
+            sans: ["Inter", "Arial", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
 </head>
-<body>
-
-  <header>
-    <div class="container">
-      <h1>StitchShift</h1>
-      <p>Asisten Mix and Match Pakaian &amp; Pelacak Target Belanja Fashion</p>
-      <nav>
-        <ul>
-          <li><a href="index.html">Beranda</a></li>
-          <li><a href="preferensi.html">Atur Preferensi</a></li>
+<body class="bg-ink text-cream font-sans leading-relaxed antialiased">
+  <header class="border-b border-white/10">
+    <div class="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-7">
+      <a href="index.html" class="font-serif text-xl font-bold tracking-wide">StitchShift</a>
+      <nav aria-label="Navigasi utama">
+        <ul class="flex flex-wrap gap-x-6 gap-y-2">
+          <li><a href="index.html" class="text-accent text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent">Beranda</a></li>
+          <li><a href="detail.html" class="text-muted hover:text-accent text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent">Detail Outfit</a></li>
+          <li><a href="preferensi.html" class="text-muted hover:text-accent text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent">Atur Preferensi</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-  
-  <div class="container">
-  
-    <div class="hero">
-      <img src="https://i.pinimg.com/736x/fb/e8/f8/fbe8f85a28233fae45f6adba4c4f38e5.jpg"
-        alt="Tumpukan baju dengan berbagai gaya dan warna, mencerminkan berbagai preferensi fashion.">
-      <div class="hero-overlay">
-        <h2>Temukan Gaya yang Benar-benar Mewakili Kamu</h2>
-        <p>Rekomendasi outfit personal, dari kasual hingga formal.</p>
-        <a href="preferensi.html" class="btn-accent">Atur Preferensi</a>
+    <!-- Dashboard: grid asimetris -->
+    <section class="mx-auto max-w-6xl px-4 pt-10 sm:px-7">
+      <h1 class="max-w-2xl font-serif text-3xl font-bold leading-tight sm:text-5xl">Temukan gaya yang benar-benar mewakili kamu</h1>
+      <p class="mt-4 max-w-xl text-muted">Pilih vibe, kategori, dan cutting favoritmu. StitchShift mencarikan set outfit lengkap dan melacak apa saja yang masih perlu dibeli.</p>
+      <a href="preferensi.html" class="mt-6 inline-block rounded-full bg-accent px-8 py-3 text-sm font-semibold transition-colors hover:bg-accent-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Atur preferensi</a>
+
+      <dl class="mt-10 grid grid-cols-3 gap-4 border-y border-white/10 py-6 text-center sm:text-left">
+        <div><dt class="text-sm text-muted">Outfit tersedia</dt><dd class="font-serif text-3xl font-bold">3</dd></div>
+        <div><dt class="text-sm text-muted">Item dimiliki</dt><dd class="font-serif text-3xl font-bold">5</dd></div>
+        <div><dt class="text-sm text-muted">Perlu dibeli</dt><dd class="font-serif text-3xl font-bold text-accent">5</dd></div>
+      </dl>
+    </section>
+
+    <section class="mx-auto mt-12 max-w-6xl px-4 sm:px-7" aria-labelledby="judul-koleksi">
+      <h2 id="judul-koleksi" class="mb-6 font-serif text-2xl font-bold">Rekomendasi outfit untukmu</h2>
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:grid-rows-2">
+        <a href="detail.html" class="group relative block min-h-64 overflow-hidden rounded-xl bg-panel md:col-span-2 md:row-span-2 min-h-96">
+          <img src="img/img 1.jpg" alt="Koleksi outfit monokrom dengan aksen merah" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent"></div>
+          <div class="relative flex h-full flex-col justify-end p-5">
+            <h3 class="font-serif text-2xl font-bold">Urban Monochrome</h3>
+            <p class="text-sm text-muted">Streetwear · Atasan &amp; Bawahan · Casual tier</p>
+            <p class="mt-2 text-sm font-semibold text-accent">2 dari 4 item dimiliki</p>
+          </div>
+        </a>
+        <a href="detail.html" class="group relative block min-h-64 overflow-hidden rounded-xl bg-panel ">
+          <img src="img/img 2.jpg" alt="Set outfit kasual minimalis" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent"></div>
+          <div class="relative flex h-full flex-col justify-end p-5">
+            <h3 class="font-serif text-2xl font-bold">Weekend Minimalist</h3>
+            <p class="text-sm text-muted">Kasual · Dress · Higher tier</p>
+            <p class="mt-2 text-sm font-semibold text-accent">0 dari 3 item dimiliki</p>
+          </div>
+        </a>
+        <a href="detail.html" class="group relative block min-h-64 overflow-hidden rounded-xl bg-panel ">
+          <img src="img/img 3.jpg" alt="Set outfit formal klasik" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent"></div>
+          <div class="relative flex h-full flex-col justify-end p-5">
+            <h3 class="font-serif text-2xl font-bold">Boardroom Classic</h3>
+            <p class="text-sm text-muted">Formal · Outer &amp; Bawahan · Higher tier</p>
+            <p class="mt-2 text-sm font-semibold text-accent">3 dari 3 item dimiliki</p>
+          </div>
+        </a>
       </div>
-    </div>
-
-    <article>
-      <h2>Tentang StitchShift</h2>
-      <p>
-        StitchShift membantu kamu menemukan padanan outfit yang sesuai dengan vibe,
-        kategori pakaian, dan tipe cutting favoritmu. Setiap rekomendasi outfit
-        dilengkapi referensi belanja dari brand internasional maupun platform lokal,
-        sehingga kamu bisa langsung melacak item mana saja yang perlu dibeli.
-      </p>
-    </article>
-
-    <article>
-      <h2>Daftar Rekomendasi Outfit</h2>
-      <div class="table-responsive">
-      <table border="1">
-        <thead>
-          <tr>
-            <th>Nama Set Outfit</th>
-            <th>Vibe</th>
-            <th>Kategori</th>
-            <th>Tier Referensi</th>
-            <th>Progress Belanja</th>
-            <th>Aksi</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Urban Monochrome</td>
-            <td>Streetwear</td>
-            <td>Atasan &amp; Bawahan</td>
-            <td><span class="tier">Casual</span> (Tokopedia, Shopee, TikTokShop)</td>
-            <td>2 dari 4 item dimiliki</td>
-            <td><a href="detail.html">Lihat Detail</a></td>
-          </tr>
-          <tr>
-            <td>Weekend Minimalist</td>
-            <td>Kasual</td>
-            <td>Dress</td>
-            <td><span class="tier">Higher</span> (Uniqlo, Zara)</td>
-            <td>0 dari 3 item dimiliki</td>
-            <td><a href="detail.html">Lihat Detail</a></td>
-          </tr>
-          <tr>
-            <td>Boardroom Classic</td>
-            <td>Formal</td>
-            <td>Outer &amp; Bawahan</td>
-            <td><span class="tier">Higher</span> (Zara, Levi's)</td>
-            <td>3 dari 3 item dimiliki</td>
-            <td><a href="detail.html">Lihat Detail</a></td>
-          </tr>
-        </tbody>
-      </table>
-      </div>
-    </article>
-
-    <article>
-      <h2>Belum menemukan gaya yang cocok?</h2>
-      <p>
-        Atur preferensimu di halaman
-        <a href="preferensi.html">Atur Preferensi</a>
-        untuk mendapatkan rekomendasi set outfit baru.
-      </p>
-    </article>
-  </div>
+    </section>
   </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 StitchShift. Proyek Tugas Mata Kuliah Web.</p>
-    </div>
+  <footer class="mt-16 border-t border-white/10 py-5">
+    <p class="mx-auto max-w-6xl px-4 text-sm text-muted sm:px-7">&copy; 2026 StitchShift. Proyek Tugas Mata Kuliah Web.</p>
   </footer>
-
 </body>
 </html>

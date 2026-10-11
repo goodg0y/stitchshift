@@ -6,108 +6,128 @@
   <title>StitchShift - Detail Outfit</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#0e0d0e",
+            panel: "#1a181a",
+            cream: "#f2efe9",
+            muted: "#a79f98",
+            accent: { DEFAULT: "#d7263d", dark: "#a81f30" }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', "Georgia", "serif"],
+            sans: ["Inter", "Arial", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
 </head>
-<body>
-
-  <header>
-    <div class="container">
-      <h1>StitchShift</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Beranda</a></li>
-          <li><a href="preferensi.html">Atur Preferensi</a></li>
+<body class="bg-ink text-cream font-sans leading-relaxed antialiased">
+  <header class="border-b border-white/10">
+    <div class="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-7">
+      <a href="index.html" class="font-serif text-xl font-bold tracking-wide">StitchShift</a>
+      <nav aria-label="Navigasi utama">
+        <ul class="flex flex-wrap gap-x-6 gap-y-2">
+          <li><a href="index.html" class="text-muted hover:text-accent text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent">Beranda</a></li>
+          <li><a href="detail.html" class="text-accent text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent">Detail Outfit</a></li>
+          <li><a href="preferensi.html" class="text-muted hover:text-accent text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent">Atur Preferensi</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-  <div class="container">
-    <article>
-      <h2>Urban Monochrome</h2>
-      <p>Vibe: Streetwear | Kategori: Atasan &amp; Bawahan | Tier Referensi: Casual</p>
+    <section class="mx-auto grid max-w-6xl gap-8 px-4 pt-10 sm:px-7 md:grid-cols-[320px_1fr] md:items-center">
+      <img src="img/img 1.jpg" width="400" height="500" alt="Set outfit Urban Monochrome: hoodie oversized hitam, celana cargo abu-abu, dan sneakers putih" class="h-72 w-full rounded-xl object-cover md:h-96">
+      <div>
+        <p class="text-sm font-semibold text-accent">Streetwear · Casual tier</p>
+        <h1 class="mt-2 font-serif text-3xl font-bold sm:text-5xl">Urban Monochrome</h1>
+        <p class="mt-4 max-w-lg text-muted">Atasan &amp; bawahan untuk tampilan kasual yang rapi dan mudah dikombinasikan ulang.</p>
+      </div>
+    </section>
 
-      <img src="https://i.pinimg.com/736x/88/50/18/8850186062c41e810ec57132dd64a959.jpg" width="400" height="500"
-        alt="Ilustrasi set outfit Urban Monochrome berupa hoodie oversized hitam dipadukan celana cargo abu-abu dan sneakers putih">
-
-      <h3>Rincian Item &amp; Referensi Belanja</h3>
-      <div class="table-responsive">
-      <table border="1">
+    <!-- Halaman tabel / daftar data -->
+    <section class="mx-auto mt-14 max-w-6xl px-4 sm:px-7" aria-labelledby="judul-tabel">
+      <h2 id="judul-tabel" class="mb-4 font-serif text-2xl font-bold">Rincian item &amp; referensi belanja</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full min-w-[560px] border-collapse text-left text-sm sm:text-base">
           <thead>
-            <tr>
-              <th>Item</th>
-              <th>Referensi Belanja</th>
-              <th>Status</th>
+            <tr class="border-b-2 border-accent text-xs text-muted">
+              <th scope="col" class="px-3 py-3 font-semibold">Item</th>
+              <th scope="col" class="px-3 py-3 font-semibold">Tier</th>
+              <th scope="col" class="px-3 py-3 font-semibold">Platform</th>
+              <th scope="col" class="px-3 py-3 font-semibold">Status</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>Hoodie Oversized Hitam</td>
-              <td><a href="https://www.example.com/hoodie-oversized-hitam" target="_blank">Beli di Example Store</a></td>
-              <td>Sudah Dimiliki</td>
+          <tbody class="divide-y divide-white/10">
+            <tr class="odd:bg-white/[0.02] transition-colors hover:bg-panel">
+              <td class="px-3 py-4">Hoodie oversized hitam</td>
+              <td class="px-3 py-4 italic text-muted">Casual</td>
+              <td class="px-3 py-4"><a href="https://www.tokopedia.com" target="_blank" rel="noopener noreferrer" class="font-semibold text-accent hover:underline">Tokopedia</a></td>
+              <td class="px-3 py-4 font-semibold text-muted">Dimiliki</td>
             </tr>
-            <tr>
-              <td>Celana Cargo Abu-abu</td>
-              <td><a href="https://www.example.com/celana-cargo-abu" target="_blank">Beli di Example Store</a></td>
-              <td>Sudah Dimiliki</td>
+            <tr class="odd:bg-white/[0.02] transition-colors hover:bg-panel">
+              <td class="px-3 py-4">Celana cargo abu-abu</td>
+              <td class="px-3 py-4 italic text-muted">Casual</td>
+              <td class="px-3 py-4"><a href="https://shopee.co.id" target="_blank" rel="noopener noreferrer" class="font-semibold text-accent hover:underline">Shopee</a></td>
+              <td class="px-3 py-4 font-semibold text-muted">Dimiliki</td>
             </tr>
-            <tr>
-              <td>Sneakers Putih</td>
-              <td><a href="https://www.example.com/sneakers-putih" target="_blank">Beli di Example Store</a></td>
-              <td>Perlu Dibeli</td>
+            <tr class="odd:bg-white/[0.02] transition-colors hover:bg-panel">
+              <td class="px-3 py-4">Sneakers putih</td>
+              <td class="px-3 py-4 italic text-muted">Casual</td>
+              <td class="px-3 py-4"><a href="https://www.tiktok.com/shop" target="_blank" rel="noopener noreferrer" class="font-semibold text-accent hover:underline">TikTokShop</a></td>
+              <td class="px-3 py-4 font-semibold text-accent">Perlu dibeli</td>
             </tr>
-            <tr>
-              <td>Tas Selempang Hitam</td>
-              <td><a href="https://www.example.com/tas-selempang-hitam" target="_blank">Beli di Example Store</a></td>
-              <td>Perlu Dibeli</td>
+            <tr class="odd:bg-white/[0.02] transition-colors hover:bg-panel">
+              <td class="px-3 py-4">Tas selempang hitam</td>
+              <td class="px-3 py-4 italic text-muted">Casual</td>
+              <td class="px-3 py-4"><a href="https://shopee.co.id" target="_blank" rel="noopener noreferrer" class="font-semibold text-accent hover:underline">Shopee</a></td>
+              <td class="px-3 py-4 font-semibold text-accent">Perlu dibeli</td>
             </tr>
           </tbody>
         </table>
       </div>
-      
-    </article>
+    </section>
 
-    <article>
-      <h3>Purchase Target &amp; Progress Tracker</h3>
-      <p>
-        Tandai item yang sudah kamu miliki (owned) agar sistem hanya melacak
-        sisa item yang perlu dibeli.
-      </p>
-
-      <form action="#" method="post">
-        <p class="checklist-item">
-          <input type="checkbox" id="item1" name="item1" checked>
-          <label for="item1">Hoodie Oversized Hitam - Sudah Dimiliki</label>
-        </p>
-        <p class="checklist-item">
-          <input type="checkbox" id="item2" name="item2" checked>
-          <label for="item2">Celana Cargo Abu-abu - Sudah Dimiliki</label>
-        </p>
-        <p class="checklist-item">
-          <input type="checkbox" id="item3" name="item3">
-          <label for="item3">Sneakers Putih - Perlu Dibeli</label>
-        </p>
-        <p class="checklist-item">
-          <input type="checkbox" id="item4" name="item4">
-          <label for="item4">Tas Selempang Hitam - Perlu Dibeli</label>
-        </p>
-        <p>
-          <button type="submit">Simpan Progress</button>
-        </p>
+    <section class="mx-auto mt-14 max-w-6xl px-4 sm:px-7" aria-labelledby="judul-tracker">
+      <h2 id="judul-tracker" class="font-serif text-2xl font-bold">Target belanja &amp; progres</h2>
+      <p class="mt-2 max-w-xl text-muted">Centang item yang sudah kamu miliki agar hanya sisa item yang dilacak.</p>
+      <form action="#" method="post" class="mt-4 max-w-2xl">
+        <ul>
+          <li class="flex items-center gap-4 border-b border-white/10 py-4 last:border-0">
+            <input type="checkbox" id="item1" name="item1" checked class="h-5 w-5 accent-accent">
+            <label for="item1" class="flex-1 font-medium">Hoodie oversized hitam</label>
+            <span class="text-xs font-bold text-muted">Dimiliki</span>
+          </li>
+          <li class="flex items-center gap-4 border-b border-white/10 py-4 last:border-0">
+            <input type="checkbox" id="item2" name="item2" checked class="h-5 w-5 accent-accent">
+            <label for="item2" class="flex-1 font-medium">Celana cargo abu-abu</label>
+            <span class="text-xs font-bold text-muted">Dimiliki</span>
+          </li>
+          <li class="flex items-center gap-4 border-b border-white/10 py-4 last:border-0">
+            <input type="checkbox" id="item3" name="item3" class="h-5 w-5 accent-accent">
+            <label for="item3" class="flex-1 font-medium">Sneakers putih</label>
+            <span class="text-xs font-bold text-accent">Perlu dibeli</span>
+          </li>
+          <li class="flex items-center gap-4 border-b border-white/10 py-4 last:border-0">
+            <input type="checkbox" id="item4" name="item4" class="h-5 w-5 accent-accent">
+            <label for="item4" class="flex-1 font-medium">Tas selempang hitam</label>
+            <span class="text-xs font-bold text-accent">Perlu dibeli</span>
+          </li>
+        </ul>
+        <button type="submit" class="mt-4 rounded-full bg-accent px-8 py-3 text-sm font-semibold transition-colors hover:bg-accent-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Simpan progres</button>
       </form>
-
-      <p>Progress: 2 dari 4 item sudah dimiliki. Sisa 2 item perlu dibeli.</p>
-    </article>
-  </div>
+      <p class="mt-5 text-sm text-muted">Progres: <strong class="text-cream">2 dari 4</strong> item dimiliki. Sisa <strong class="text-cream">2 item</strong> perlu dibeli.</p>
+    </section>
   </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 StitchShift. Proyek Tugas Mata Kuliah Web.</p>
-    </div>
+  <footer class="mt-16 border-t border-white/10 py-5">
+    <p class="mx-auto max-w-6xl px-4 text-sm text-muted sm:px-7">&copy; 2026 StitchShift. Proyek Tugas Mata Kuliah Web.</p>
   </footer>
-
 </body>
 </html>
