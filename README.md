@@ -19,7 +19,7 @@ Modern Editorial / High-Fashion Minimalist — terinspirasi dari lookbook majala
 | `detail.html` | Detail set outfit + purchase tracker |
 
 ## 🛠️ Progress Pengerjaan
-- [x] **Minggu 4** — Styling dengan Bootstrap/Tailwind
+- [x] **Minggu 5** — Penerapan Interaksi (Javascript & JQuery)
 
 ## 📸 Screenshot
 
