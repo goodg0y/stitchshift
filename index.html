@@ -50,47 +50,25 @@
       <a href="preferensi.html" class="mt-6 inline-block rounded-full bg-accent px-8 py-3 text-sm font-semibold transition-colors hover:bg-accent-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Atur preferensi</a>
 
       <dl class="mt-10 grid grid-cols-3 gap-4 border-y border-white/10 py-6 text-center sm:text-left">
-        <div><dt class="text-sm text-muted">Outfit tersedia</dt><dd class="font-serif text-3xl font-bold">3</dd></div>
-        <div><dt class="text-sm text-muted">Item dimiliki</dt><dd class="font-serif text-3xl font-bold">5</dd></div>
-        <div><dt class="text-sm text-muted">Perlu dibeli</dt><dd class="font-serif text-3xl font-bold text-accent">5</dd></div>
+        <div><dt class="text-sm text-muted">Outfit tersedia</dt><dd id="stat-outfit" class="font-serif text-3xl font-bold">0</dd></div>
+        <div><dt class="text-sm text-muted">Item dimiliki</dt><dd id="stat-dimiliki" class="font-serif text-3xl font-bold">0</dd></div>
+        <div><dt class="text-sm text-muted">Perlu dibeli</dt><dd id="stat-perlu" class="font-serif text-3xl font-bold text-accent">0</dd></div>
       </dl>
     </section>
 
     <section class="mx-auto mt-12 max-w-6xl px-4 sm:px-7" aria-labelledby="judul-koleksi">
-      <h2 id="judul-koleksi" class="mb-6 font-serif text-2xl font-bold">Rekomendasi outfit untukmu</h2>
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:grid-rows-2">
-        <a href="detail.html" class="group relative block min-h-64 overflow-hidden rounded-xl bg-panel md:col-span-2 md:row-span-2 min-h-96">
-          <img src="img/img 1.jpg" alt="Koleksi outfit monokrom dengan aksen merah" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent"></div>
-          <div class="relative flex h-full flex-col justify-end p-5">
-            <h3 class="font-serif text-2xl font-bold">Urban Monochrome</h3>
-            <p class="text-sm text-muted">Streetwear · Atasan &amp; Bawahan · Casual tier</p>
-            <p class="mt-2 text-sm font-semibold text-accent">2 dari 4 item dimiliki</p>
-          </div>
-        </a>
-        <a href="detail.html" class="group relative block min-h-64 overflow-hidden rounded-xl bg-panel ">
-          <img src="img/img 2.jpg" alt="Set outfit kasual minimalis" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent"></div>
-          <div class="relative flex h-full flex-col justify-end p-5">
-            <h3 class="font-serif text-2xl font-bold">Weekend Minimalist</h3>
-            <p class="text-sm text-muted">Kasual · Dress · Higher tier</p>
-            <p class="mt-2 text-sm font-semibold text-accent">0 dari 3 item dimiliki</p>
-          </div>
-        </a>
-        <a href="detail.html" class="group relative block min-h-64 overflow-hidden rounded-xl bg-panel ">
-          <img src="img/img 3.jpg" alt="Set outfit formal klasik" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent"></div>
-          <div class="relative flex h-full flex-col justify-end p-5">
-            <h3 class="font-serif text-2xl font-bold">Boardroom Classic</h3>
-            <p class="text-sm text-muted">Formal · Outer &amp; Bawahan · Higher tier</p>
-            <p class="mt-2 text-sm font-semibold text-accent">3 dari 3 item dimiliki</p>
-          </div>
-        </a>
+      <h2 id="judul-koleksi" class="mb-4 font-serif text-2xl font-bold">Rekomendasi outfit untukmu</h2>
+      <div id="filter-vibe" class="mb-6 flex flex-wrap gap-2" role="group" aria-label="Filter vibe">
+        <button type="button" data-vibe="semua" class="filter-btn rounded-full bg-accent text-white px-5 py-2 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Semua</button><button type="button" data-vibe="kasual" class="filter-btn rounded-full bg-panel text-muted px-5 py-2 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Kasual</button><button type="button" data-vibe="streetwear" class="filter-btn rounded-full bg-panel text-muted px-5 py-2 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Streetwear</button><button type="button" data-vibe="formal" class="filter-btn rounded-full bg-panel text-muted px-5 py-2 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Formal</button>
       </div>
+      <div id="grid-outfit" class="grid grid-cols-1 gap-4 md:grid-cols-3 md:grid-rows-2"></div>
+      <p id="kosong" style="display:none" class="text-muted">Belum ada outfit untuk vibe ini.</p>
     </section>
   </main>
   <footer class="mt-16 border-t border-white/10 py-5">
     <p class="mx-auto max-w-6xl px-4 text-sm text-muted sm:px-7">&copy; 2026 StitchShift. Proyek Tugas Mata Kuliah Web.</p>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

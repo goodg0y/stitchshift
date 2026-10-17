@@ -47,7 +47,7 @@
     <h1 class="font-serif text-3xl font-bold sm:text-5xl">Atur preferensi gaya kamu</h1>
     <p class="mt-4 max-w-xl text-muted">Pilih kombinasi yang paling mewakili gayamu. Rekomendasi akan dicocokkan dengan katalog outfit.</p>
 
-    <form action="#" method="post" class="mt-10 max-w-3xl">
+    <form id="form-preferensi" action="#" method="post" novalidate class="mt-10 max-w-3xl">
         <fieldset class="mb-8">
           <legend class="mb-3 font-serif font-bold">Vibe</legend>
           <div class="flex flex-wrap gap-2.5">
@@ -135,9 +135,15 @@
         </div>
         <button type="submit" class="rounded-full bg-accent px-10 py-3.5 text-sm font-semibold transition-colors hover:bg-accent-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Lihat rekomendasi outfit</button>
     </form>
+    <section id="hasil" style="display:none" class="mt-14 max-w-3xl" aria-labelledby="judul-hasil" tabindex="-1">
+      <h2 id="judul-hasil" class="mb-4 font-serif text-2xl font-bold">Rekomendasi outfit</h2>
+      <ul id="daftar-hasil" class="space-y-3"></ul>
+    </section>
   </main>
   <footer class="mt-16 border-t border-white/10 py-5">
     <p class="mx-auto max-w-6xl px-4 text-sm text-muted sm:px-7">&copy; 2026 StitchShift. Proyek Tugas Mata Kuliah Web.</p>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
